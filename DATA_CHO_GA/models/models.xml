@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ModelRegistry xmlns="http://www.qsardb.org/QDB">
+    <Model>
+        <Id>Eq.1</Id>
+        <Name>Model for diverse and pure compounds</Name>
+        <Labels></Labels>
+        <Cargos>pmml bibtex</Cargos>
+        <PropertyId>LFLT</PropertyId>
+    </Model>
+</ModelRegistry>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PredictionRegistry xmlns="http://www.qsardb.org/QDB">
+    <Prediction>
+        <Id>Eq.1_train</Id>
+        <Name>Training set</Name>
+        <Labels></Labels>
+        <Cargos>values</Cargos>
+        <ModelId>Eq.1</ModelId>
+        <Type>training</Type>
+    </Prediction>
+    <Prediction>
+        <Id>Eq.1_valid</Id>
+        <Name>Validation set</Name>
+        <Labels></Labels>
+        <Cargos>values</Cargos>
+        <ModelId>Eq.1</ModelId>
+        <Type>validation</Type>
+    </Prediction>
+</PredictionRegistry>

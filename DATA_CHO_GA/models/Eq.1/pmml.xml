@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<PMML xmlns="http://www.dmg.org/PMML-4_1" version="4.1">
+    <DataDictionary>
+        <DataField name="properties/LFLT" displayName="Lower flammability limit temperature" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/Mv" displayName="Mean atomic van der Waals volume (scaled on carbon atom)" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/CID" displayName="Randic I.D. number" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/EEig02d" displayName="Eigenvalue 02 from edge adjacency matrix weighted by dipole moment" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/GGI1" displayName="Topological charge index of order 1" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/nROH" displayName="Number of hydroxyl groups" optype="continuous" dataType="double"/>
+        <DataField name="descriptors/nHDon" displayName="Number of donor atoms for H-bonds (N and O)" optype="continuous" dataType="double"/>
+    </DataDictionary>
+    <RegressionModel functionName="regression" targetFieldName="properties/LFLT">
+        <MiningSchema>
+            <MiningField name="properties/LFLT" usageType="predicted"/>
+            <MiningField name="descriptors/Mv" usageType="active"/>
+            <MiningField name="descriptors/CID" usageType="active"/>
+            <MiningField name="descriptors/EEig02d" usageType="active"/>
+            <MiningField name="descriptors/GGI1" usageType="active"/>
+            <MiningField name="descriptors/nROH" usageType="active"/>
+            <MiningField name="descriptors/nHDon" usageType="active"/>
+        </MiningSchema>
+        <RegressionTable intercept="73.1766">
+            <NumericPredictor name="descriptors/Mv" coefficient="213.3319"/>
+            <NumericPredictor name="descriptors/CID" coefficient="5.0667"/>
+            <NumericPredictor name="descriptors/EEig02d" coefficient="23.4601"/>
+            <NumericPredictor name="descriptors/GGI1" coefficient="-7.9145"/>
+            <NumericPredictor name="descriptors/nROH" coefficient="38.5377"/>
+            <NumericPredictor name="descriptors/nHDon" coefficient="20.692"/>
+        </RegressionTable>
+    </RegressionModel>
+</PMML>
